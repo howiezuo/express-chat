@@ -1,0 +1,24 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding-top: 50px;
+}
+
+#history ul {
+    list-style: none;
+}
+
+#input {
+    bottom: 70px;
+    position: fixed;
+}
+
+.footer {
+    bottom: 0;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+}

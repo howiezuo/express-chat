@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    script(type='text/x-handlebars' id='application')
+        {{outlet}}
+
+    script(type='text/x-handlebars' data-template-name='chat')
+        #history
+            .container
+                ul
+                    {{#each}}
+                    li
+                        h4
+                            {{message}}&nbsp;&nbsp;&nbsp;&nbsp;
+                            small ({{format-date sendDate}})
+                            
+                    {{/each}}
+
+        #input
+            .input-group.input-group-lg.col-md-8.col-md-offset-2
+                {{input type='text' class='form-control' value=message placeholder='Say something funny!' }}
+                //- input.form-control(type='text', placeholder="Say something funny!" ng-model="message")
+                .input-group-btn
+                    button.btn.btn-primary(type="button" "{{action 'sendMessage'}}") Send
+
+
+block scripts
+    script(type='text/javascript', src='/socket.io/socket.io.js')
+    script(src='/javascripts/chatApp.js')
