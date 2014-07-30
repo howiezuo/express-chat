@@ -12,13 +12,16 @@ body {
 }
 
 #input {
-    bottom: 70px;
+    bottom: 120px;
     position: fixed;
 }
 
 .footer {
     bottom: 0;
-    height: 50px;
+    height: 100px;
     position: fixed;
     width: 100%;
+}
+.footer p {
+    text-align: right;
 }
